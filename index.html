@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPU Scheduler</title>
+    <style>
+      td {
+        text-align: center;
+      }
+      table {
+        overflow-x: scroll;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .l100 {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="google_translate_element" style="text-align: right"></div>
+    <form>
+      <fieldset>
+        <legend>FCFS</legend>
+        <input type="number" name="input1" placeholder="Waktu Selesai" />
+        <input type="number" name="input2" placeholder="Waktu Tunggu" />
+        <input type="number" name="input3" placeholder="Waktu Tiba" />
+      </fieldset>
+    </form>
+    <div id="output1">cek</div>
+    <div id="output2"></div>
+
+    <table border="1">
+      <tr>
+        <th>Proses</th>
+        <th>arrivalTime</th>
+        <th>burstTime</th>
+      </tr>
+      <tr>
+        <td>P1</td>
+        <td><input type="number" id="row11" class="l100" /></td>
+        <td><input type="number" id="row21" class="l100" /></td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td><input type="number" id="row12" class="l100" /></td>
+        <td><input type="number" id="row22" class="l100" /></td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td><input type="number" id="row13" class="l100" /></td>
+        <td><input type="number" id="row23" class="l100" /></td>
+      </tr>
+      <tr>
+        <td>P4</td>
+        <td><input type="number" id="row14" class="l100" /></td>
+        <td><input type="number" id="row24" class="l100" /></td>
+      </tr>
+      <tr>
+        <td>P5</td>
+        <td><input type="number" id="row15" class="l100" /></td>
+        <td><input type="number" id="row25" class="l100" /></td>
+      </tr>
+    </table>
+    <button onclick="refreshPage()">Masukkan Data</button>
+    <button onclick="FCFS(processes)">Hitung</button>
+
+    <form>
+      <br />
+      <fieldset>
+        <legend>FCFS</legend>
+        <p>
+          First Come First Serve (FCFS) adalah salah satu algoritma scheduling. Sesuai dengan
+          namanya, algoritma ini akan memproses job yang datang terlebih dahulu. Ini dikenal juga
+          sebagai Algoritma Shortest Job First (SJF).<br /><br />
+
+          FCFS adalah prioritas algoritma yang paling rendah dan tidak mengurangi waktu merespon.
+          Mereka dengan senang hati akan menunggu proses yang lama, dan karenanya sangat cocok untuk
+          daftar antrian. Ini adalah salah satu algoritma yang paling mudah untuk dipahami.<br /><br />
+
+          Prosedur berikut digunakan dalam algoritma FCFS: Daftarkan proses yang tersedia. Pilih
+          proses tersebut dan proses sesuai urutan kedatangannya. Mulailah proses dengan memuat dan
+          menyiapkan proses. Eksekusi proses tersebut. Jika yang dipilih sudah selesai, pindah ke
+          proses berikutnya. Ulangi sampai daftar proses selesai.
+        </p>
+        <span>Created by <a href="//instagram.com/ferryafbi">ferryafbi</a></span
+        ><br /><br />
+
+        <span><i>Bantu sempurnakan tools >> </i></span
+        ><span><a href="//github.com/ferryafbi/tools-unixkuy">github</a></span>
+      </fieldset>
+    </form>
+
+    <script src="/cpu-scheduler/fcfs/script.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+      }
+    </script>
+    
+    <script>
+      function refreshPage() {
+        alert("Data masuk");
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>
